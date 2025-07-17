@@ -31,7 +31,6 @@ The core of the project is a **Convolutional Neural Network (CNN)** trained on s
 ## 🔧 Setup & Installation
 
 ### 1. Clone the Repository
-```bash
 git clone https://github.com/nidheerakesh/music-genre-classifier.git
 cd music-genre-classifier
 2. Create and Activate a Virtual Environment
