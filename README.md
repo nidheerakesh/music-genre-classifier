@@ -42,7 +42,11 @@ source venv/bin/activate
 
 
 3. Install DependenciesThis project uses a requirements.txt file to manage its dependencies.pip install -r requirements.txt
-(Note: You can generate this file by running pip freeze > requirements.txt in your activated environment.)4. Download the DatasetDownload the GTZAN Genre Collection dataset. You can find it on Kaggle or by searching online.Unzip the file and place the genres_original folder (or genres) inside a data directory in the project root, so the path is data/genres/....🏃‍♀️ How to Use the Application
+(Note: You can generate this file by running pip freeze > requirements.txt in your activated environment.)
+4. Download the DatasetDownload the GTZAN Genre Collection dataset.
+   You can find it on Kaggle or by searching online.Unzip the file and place the genres_original folder (or genres) inside a data directory in the project root, so the path is data/genres/....
+
+How to Use the Application
 1. Preprocess the DataFirst, you need to convert the raw audio files into spectrograms.
    Run the preprocessing script:python preprocess.py
    This will create a data/spectrograms folder with all the generated images.
