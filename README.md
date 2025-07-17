@@ -1,94 +1,48 @@
-# 🎶 AI Music Genre Classifier
+AI Music Genre Classifier
 
-## 🚀 Overview
+OVERVIEW
+This project is a web application that uses a deep learning model to classify the genre of a music track from an audio file. It can identify 10 genres: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, and rock.
 
-This project is a complete, end-to-end web application that uses a deep learning model to classify the **genre of a music track** from an audio file. It can identify **10 genres**:  
-🎸 *blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, and rock.*
+TECHNOLOGIES
 
-The core of the project is a **Convolutional Neural Network (CNN)** trained on spectrograms generated from the **GTZAN dataset**. The model is served via a **Flask API** with a clean user interface for uploading audio files and viewing predictions.
+Backend: Python, Flask
 
----
+Machine Learning: TensorFlow, Keras
 
-## ✨ Features
+Audio & Data Processing: Librosa, NumPy
 
-- 🎧 **Audio Preprocessing:** Converts raw `.au` audio files into Mel spectrogram images  
-- 🧠 **Deep Learning Model:** Robust CNN architecture built with TensorFlow + Keras  
-- 🌐 **Web Interface:** Simple and intuitive UI for audio upload  
-- ⚡ **Real-time Prediction:** Instant genre classification on uploaded audio  
+Data Visualization: Matplotlib
 
----
+Dataset: GTZAN Genre Collection
 
-## 🛠️ Tech Stack
+SETUP AND INSTALLATION
 
-- **Backend:** Python, Flask  
-- **Machine Learning:** TensorFlow, Keras  
-- **Audio Processing:** Librosa, NumPy  
-- **Visualization:** Matplotlib  
-- **Dataset:** GTZAN Genre Collection  
-
----
-
-## 🔧 Setup & Installation
-
-### 1. Clone the Repository
+Clone the Repository:
 git clone https://github.com/nidheerakesh/music-genre-classifier.git
 cd music-genre-classifier
-2. Create and Activate a Virtual Environment
-bash
-Copy
-Edit
-# Create virtual environment
+
+Create and Activate Virtual Environment:
 python -m venv venv
+source venv/bin/activate  (On macOS/Linux)
+venv\Scripts\activate    (On Windows)
 
-# Activate the environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-3. Install Dependencies
-bash
-Copy
-Edit
+Install Dependencies:
 pip install -r requirements.txt
-💡 You can regenerate this file using:
-pip freeze > requirements.txt
 
-4. Download the Dataset
-Download the GTZAN Genre Collection from Kaggle or other sources
+Download the Dataset:
+Download the GTZAN Genre Collection dataset (from Kaggle or elsewhere). Unzip it and place the 'genres' folder at this path: data/genres/.
 
-Place the extracted folder in the following location:
-data/genres/
+HOW TO USE
 
-🏃‍♀️ How to Use
-1. Preprocess the Audio Data
+Preprocess the Data:
+Run this command to turn the audio files into images.
 python preprocess.py
-Converts audio files to spectrograms and stores them in:
 
-
-data/spectrograms/
-2. Train the Model
+Train the Model:
+Run this command to train the AI model. This will create the music_genre_classifier.h5 file.
 python train.py
-Trains a CNN on the spectrograms
 
-Saves model to: music_genre_classifier.h5
-
-3. Run the Web App
+Run the Application:
+Run this command to start the web server.
 python app.py
-Open your browser and go to:
-http://127.0.0.1:5000/
-
-📁 Project Structure
-music_genre_classifier/
-├── app.py                     # Flask web application
-├── preprocess.py              # Converts audio to spectrograms
-├── train.py                   # Trains CNN model
-├── music_genre_classifier.h5  # Trained model (output)
-├── requirements.txt           # Dependencies
-├── templates/
-│   └── index.html             # Frontend UI
-├── data/
-│   ├── genres/                # Raw GTZAN audio files (download separately)
-│   └── spectrograms/          # Generated spectrogram images
-├── uploads/                   # Temporary uploaded files
-├── .gitignore
-└── README.md
+Then, open your web browser and go to http://127.0.0.1:5000/.
