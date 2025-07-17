@@ -29,7 +29,7 @@ To run this project locally:
 
 **1. Clone the Repository**
 ```bash
-git clone [https://github.com/your-username/music-genre-classifier.git](https://github.com/your-username/music-genre-classifier.git)
+git clone [https://github.com/nidheerakesh/music-genre-classifier.git](https://github.com/your-username/music-genre-classifier.git)
 cd music-genre-classifier
 2. Create and Activate a Virtual Environment# Create the virtual environment
 python -m venv venv
@@ -39,11 +39,18 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
+
+
 3. Install DependenciesThis project uses a requirements.txt file to manage its dependencies.pip install -r requirements.txt
-(Note: You can generate this file by running pip freeze > requirements.txt in your activated environment.)4. Download the DatasetDownload the GTZAN Genre Collection dataset. You can find it on Kaggle or by searching online.Unzip the file and place the genres_original folder (or genres) inside a data directory in the project root, so the path is data/genres/....🏃‍♀️ How to Use the Application1. Preprocess the DataFirst, you need to convert the raw audio files into spectrograms. Run the preprocessing script:python preprocess.py
-This will create a data/spectrograms folder with all the generated images.2. Train the ModelNext, train the CNN model on the spectrograms. This will create the music_genre_classifier.h5 model file.python train.py
-(Note: This step can take 10-20 minutes depending on your computer's hardware.)3. Run the Flask ApplicationFinally, start the web server:python app.py
-Open your web browser and navigate to http://127.0.0.1:5000/ to use the application.
+(Note: You can generate this file by running pip freeze > requirements.txt in your activated environment.)4. Download the DatasetDownload the GTZAN Genre Collection dataset. You can find it on Kaggle or by searching online.Unzip the file and place the genres_original folder (or genres) inside a data directory in the project root, so the path is data/genres/....🏃‍♀️ How to Use the Application
+1. Preprocess the DataFirst, you need to convert the raw audio files into spectrograms.
+   Run the preprocessing script:python preprocess.py
+   This will create a data/spectrograms folder with all the generated images.
+2. Train the ModelNext, train the CNN model on the spectrograms.
+   This will create the music_genre_classifier.h5 model file.python train.py
+   (Note: This step can take 10-20 minutes depending on your computer's hardware.)
+3. Run the Flask ApplicationFinally, start the web server:python app.py
+   Open your web browser and navigate to http://127.0.0.1:5000/ to use the application.
 
 📂 Project Structure
 ├── app.py                  # The Flask web application
