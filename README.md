@@ -68,4 +68,3 @@ How to Use the Application
 │   ├── genres/             # Raw GTZAN audio files (needs to be downloaded)
 │   └── spectrograms/       # Generated spectrogram images
 └── uploads/                # Folder for temporary user uploads
-</markdown>
